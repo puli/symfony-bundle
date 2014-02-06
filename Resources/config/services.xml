@@ -9,6 +9,8 @@
         <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
         <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
         <parameter key="puli.file_locator.class">Webmozart\Symfony\PuliBridge\Config\PuliFileLocator</parameter>
+        <parameter key="puli.twig.extension.class">Webmozart\Twig\PuliExtension\PuliExtension</parameter>
+        <parameter key="puli.twig.file_loader.class">Webmozart\Twig\PuliExtension\Loader\PuliLoader</parameter>
     </parameters>
 
     <services>
@@ -21,6 +23,16 @@
 
         <service id="puli.file_locator" class="%puli.file_locator.class%" public="false">
             <argument type="service" id="puli.resource_locator" />
+        </service>
+
+        <service id="puli.twig.extension" class="%puli.twig.extension.class%" public="false">
+            <argument type="service" id="puli.resource_locator" />
+            <tag name="twig.extension" />
+        </service>
+
+        <service id="puli.twig.file_loader" class="%puli.twig.file_loader.class%" public="false">
+            <argument type="service" id="puli.resource_locator" />
+            <tag name="twig.loader"/>
         </service>
 
         <service id="file_locator" alias="puli.file_locator" />
