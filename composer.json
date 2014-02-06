@@ -1,0 +1,29 @@
+{
+    "name": "webmozart/symfony-puli-bundle",
+    "description": "Integrates the Puli library into the Symfony2 full-stack framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernhard Schussek",
+            "email": "bschussek@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.3",
+        "webmozart/puli": "~1.0@dev",
+        "webmozart/symfony-puli-bridge": "~1.0@dev",
+        "webmozart/composer-puli-plugin": "~1.0@dev",
+        "webmozart/twig-puli-extension": "~1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webmozart\\Symfony\\PuliBundle\\": "src/",
+            "Webmozart\\Symfony\\PuliBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
