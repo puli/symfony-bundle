@@ -27,6 +27,15 @@
         "resources": {
             "export": {
                 "/webmozart/symfony-puli-bundle": "Resources"
+            },
+            "override": {
+                "/symfony/framework-bundle": "../../symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources",
+                "/symfony/security-bundle": "../../symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources",
+                "/symfony/twig-bundle": "../../symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources",
+                "/symfony/web-profiler-bundle": "../../symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources",
+                "/sensio/distribution-bundle": "../../sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources",
+                "/sensio/framework-extra-bundle": "../../sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources",
+                "/sensio/generator-bundle": "../../sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources"
             }
         }
     }
