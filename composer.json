@@ -17,13 +17,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Webmozart\\Symfony\\PuliBundle\\": "src/",
-            "Webmozart\\Symfony\\PuliBundle\\Tests\\": "tests/"
+            "Webmozart\\Symfony\\PuliBundle\\": ""
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "resources": {
+            "export": {
+                "/webmozart/symfony-puli-bundle": "Resources"
+            }
         }
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="puli.resource_locator.path">%kernel.root_dir%/../vendor/resource-locator.php</parameter>
+        <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
+        <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
+        <parameter key="puli.file_locator.class">Webmozart\Symfony\PuliBridge\Config\PuliFileLocator</parameter>
+    </parameters>
+
+    <services>
+        <service id="puli.resource_locator"
+                 class="%puli.resource_locator.class%"
+                 factory-class="%puli.resource_locator_factory.class%"
+                 factory-method="createResourceLocator">
+            <argument type="string">%puli.resource_locator.path%</argument>
+        </service>
+
+        <service id="puli.file_locator" class="%puli.file_locator.class%" public="false">
+            <argument type="service" id="puli.resource_locator" />
+        </service>
+
+        <service id="file_locator" alias="puli.file_locator" />
+    </services>
+</container>
