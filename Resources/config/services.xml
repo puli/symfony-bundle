@@ -10,7 +10,7 @@
         <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
         <parameter key="puli.file_locator.class">Webmozart\Symfony\PuliBridge\Config\PuliFileLocator</parameter>
         <parameter key="puli.twig.extension.class">Webmozart\Twig\PuliExtension\PuliExtension</parameter>
-        <parameter key="puli.twig.file_loader.class">Webmozart\Twig\PuliExtension\Loader\PuliLoader</parameter>
+        <parameter key="puli.twig.file_loader.class">Webmozart\Twig\PuliExtension\PuliLoader</parameter>
     </parameters>
 
     <services>
