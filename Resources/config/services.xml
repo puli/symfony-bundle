@@ -9,8 +9,9 @@
         <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
         <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
         <parameter key="puli.file_locator.chain.class">Webmozart\Symfony\PuliBridge\Config\FileLocatorChain</parameter>
-        <parameter key="puli.file_locator.puli.class">Webmozart\Symfony\PuliBridge\Config\PuliFileLocator</parameter>
         <parameter key="puli.file_locator.kernel.class">Webmozart\Symfony\PuliBridge\Config\ChainableKernelFileLocator</parameter>
+        <parameter key="puli.file_locator.puli.class">Webmozart\Symfony\PuliBridge\Config\PuliFileLocator</parameter>
+        <parameter key="puli.file_locator.paths.class">Webmozart\Symfony\PuliBridge\Config\ChainableFileLocator</parameter>
         <parameter key="puli.twig.extension.class">Webmozart\Twig\PuliExtension\PuliExtension</parameter>
         <parameter key="puli.twig.file_loader.class">Webmozart\Twig\PuliExtension\PuliLoader</parameter>
     </parameters>
@@ -25,17 +26,21 @@
 
         <service id="puli.file_locator.kernel" class="%puli.file_locator.kernel.class%" public="false">
             <argument type="service" id="kernel" />
-            <argument>%kernel.root_dir%/Resources</argument>
         </service>
 
         <service id="puli.file_locator.puli" class="%puli.file_locator.puli.class%" public="false">
             <argument type="service" id="puli.resource_locator" />
         </service>
 
+        <service id="puli.file_locator.paths" class="%puli.file_locator.paths.class%" public="false">
+            <argument>%kernel.root_dir%/Resources</argument>
+        </service>
+
         <service id="puli.file_locator.chain" class="%puli.file_locator.chain.class%" public="false">
             <argument type="collection">
                 <argument type="service" id="puli.file_locator.kernel" />
                 <argument type="service" id="puli.file_locator.puli" />
+                <argument type="service" id="puli.file_locator.paths" />
             </argument>
         </service>
 
