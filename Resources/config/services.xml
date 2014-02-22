@@ -9,7 +9,7 @@
         <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
         <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
         <parameter key="puli.file_locator.chain.class">Webmozart\Puli\Extension\Symfony\Config\FileLocatorChain</parameter>
-        <parameter key="puli.file_locator.kernel.class">Webmozart\Puli\Extension\Symfony\Config\ChainableKernelFileLocator</parameter>
+        <parameter key="puli.file_locator.kernel.class">Webmozart\Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator</parameter>
         <parameter key="puli.file_locator.puli.class">Webmozart\Puli\Extension\Symfony\Config\PuliFileLocator</parameter>
         <parameter key="puli.file_locator.paths.class">Webmozart\Puli\Extension\Symfony\Config\ChainableFileLocator</parameter>
         <parameter key="puli.twig.extension.class">Webmozart\Puli\Extension\Twig\PuliExtension</parameter>
