@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "20bf38faf265e2fff8f7486d95a17a49",
+    "hash": "555c8c7d09a3c72f508668b20571ecde",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -720,19 +720,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/puli.git",
-                "reference": "bf9f7b3cb6b187280b75615c61993250fedc4c54"
+                "reference": "2e46102cca828627feb817dbdfb68f64ecd40e3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/puli/zipball/bf9f7b3cb6b187280b75615c61993250fedc4c54",
-                "reference": "bf9f7b3cb6b187280b75615c61993250fedc4c54",
+                "url": "https://api.github.com/repos/webmozart/puli/zipball/2e46102cca828627feb817dbdfb68f64ecd40e3a",
+                "reference": "2e46102cca828627feb817dbdfb68f64ecd40e3a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "symfony/filesystem": "~2.0"
+                "symfony/config": "~2.3",
+                "symfony/filesystem": "~2.0",
+                "symfony/http-kernel": "~2.3",
+                "twig/twig": "~1.0"
+            },
+            "suggest": {
+                "symfony/config": "Puli provides an extension for the Symfony Config component.",
+                "symfony/http-kernel": "Puli provides an extension for the Symfony HttpKernel component.",
+                "twig/twig": "Puli provides an extension for the Twig templating engine."
             },
             "type": "library",
             "extra": {
@@ -757,98 +765,7 @@
                 }
             ],
             "description": "Puli returns the absolute file paths of the files in your PHP project through a unified naming system.",
-            "time": "2014-02-16 14:28:16"
-        },
-        {
-            "name": "webmozart/symfony-puli-bridge",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/symfony-puli-bridge.git",
-                "reference": "b36271515d67088a88bffe1d34ecb28bff960d3f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/symfony-puli-bridge/zipball/b36271515d67088a88bffe1d34ecb28bff960d3f",
-                "reference": "b36271515d67088a88bffe1d34ecb28bff960d3f",
-                "shasum": ""
-            },
-            "require": {
-                "webmozart/puli": "~1.0@alpha"
-            },
-            "require-dev": {
-                "symfony/config": "~2.3"
-            },
-            "suggest": {
-                "symfony/config": "The Puli bridge provides a Puli-aware file locator for the Config component."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Symfony\\PuliBridge\\": "src/",
-                    "Webmozart\\Symfony\\PuliBridge\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Integrates the Puli library into various Symfony2 components.",
-            "time": "2014-02-06 16:37:29"
-        },
-        {
-            "name": "webmozart/twig-puli-extension",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/twig-puli-extension.git",
-                "reference": "ad7219cdfbc424357b8b8a6908c8051d034c4cc6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/twig-puli-extension/zipball/ad7219cdfbc424357b8b8a6908c8051d034c4cc6",
-                "reference": "ad7219cdfbc424357b8b8a6908c8051d034c4cc6",
-                "shasum": ""
-            },
-            "require": {
-                "twig/twig": "~1.0",
-                "webmozart/puli": "~1.0@dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Twig\\PuliExtension\\": "src/",
-                    "Webmozart\\Twig\\PuliExtension\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Locates Twig templates using a Puli resource locator.",
-            "time": "2014-02-16 20:18:41"
+            "time": "2014-02-22 19:54:24"
         }
     ],
     "packages-dev": [
@@ -860,9 +777,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "webmozart/puli": 20,
-        "webmozart/symfony-puli-bridge": 20,
-        "webmozart/composer-puli-plugin": 20,
-        "webmozart/twig-puli-extension": 20
+        "webmozart/composer-puli-plugin": 20
     },
     "platform": [
 
