@@ -24,8 +24,7 @@
         <service id="puli.twig.cache_warmer" class="%puli.twig.cache_warmer.class%" public="false">
             <argument type="service" id="puli.resource_locator" />
             <argument type="service" id="twig" />
-            <!-- Must take place after twig.cache_warmer -->
-            <tag name="kernel.cache_warmer" priority="-100" />
+            <tag name="kernel.cache_warmer" />
         </service>
     </services>
 </container>
