@@ -13,6 +13,9 @@
         "webmozart/puli": "~1.0@dev",
         "webmozart/composer-puli-plugin": "~1.0@dev"
     },
+    "require-dev": {
+        "kriswallsmith/assetic": "~1.1"
+    },
     "autoload": {
         "psr-4": {
             "Webmozart\\Symfony\\PuliBundle\\": ""
