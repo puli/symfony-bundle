@@ -7,6 +7,7 @@
     <parameters>
         <parameter key="puli.twig.extension.class">Webmozart\Puli\Extension\Twig\PuliExtension</parameter>
         <parameter key="puli.twig.file_loader.class">Webmozart\Puli\Extension\Twig\PuliLoader</parameter>
+        <parameter key="puli.twig.cache_warmer.class">Webmozart\Puli\Extension\Twig\CacheWarmer\TwigTemplateCacheWarmer</parameter>
     </parameters>
 
     <services>
@@ -18,6 +19,12 @@
         <service id="puli.twig.file_loader" class="%puli.twig.file_loader.class%" public="false">
             <argument type="service" id="puli.resource_locator" />
             <tag name="twig.loader"/>
+        </service>
+
+        <service id="puli.twig.cache_warmer" class="%puli.twig.cache_warmer.class%" public="false">
+            <argument type="service" id="puli.resource_locator" />
+            <!-- Must take place after twig.cache_warmer -->
+            <tag name="kernel.cache_warmer" priority="-100" />
         </service>
     </services>
 </container>
