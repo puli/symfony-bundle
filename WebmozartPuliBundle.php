@@ -11,7 +11,9 @@
 
 namespace Webmozart\Symfony\PuliBundle;
 
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Webmozart\Symfony\PuliBundle\DependencyInjection\Compiler\ActivateLazyAssetsPass;
 
 /**
  * @since  1.0
@@ -19,4 +21,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class WebmozartPuliBundle extends Bundle
 {
+    public function build(ContainerBuilder $container)
+    {
+        $container->addCompilerPass(new ActivateLazyAssetsPass());
+    }
 }
