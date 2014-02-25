@@ -34,6 +34,6 @@ class WebmozartPuliExtension extends Extension
         $loader->load('services.xml');
         $loader->load('assetic.xml');
         $loader->load('twig.xml');
-        $loader->load('assetic_twiggit.xml');
+        $loader->load('assetic_twig.xml');
     }
 }
