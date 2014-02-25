@@ -8,14 +8,22 @@
             "email": "bschussek@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "https://github.com/webmozart/assetic.git"
+        },
+        {
+            "type": "git",
+            "url":  "https://github.com/webmozart/AsseticBundle.git"
+        }
+    ],
     "require": {
         "symfony/symfony": "~2.3",
         "webmozart/puli": "~1.0@dev",
-        "webmozart/composer-puli-plugin": "~1.0@dev"
-    },
-    "require-dev": {
-        "kriswallsmith/assetic": "~1.1",
-        "symfony/assetic-bundle": "~2.3"
+        "webmozart/composer-puli-plugin": "~1.0@dev",
+        "kriswallsmith/assetic": "dev-lazy-assetic-node as 1.2.x-dev",
+        "symfony/assetic-bundle": "dev-lazy-assetic-node as 2.4.x-dev"
     },
     "autoload": {
         "psr-4": {
