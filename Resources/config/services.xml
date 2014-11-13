@@ -7,7 +7,7 @@
     <parameters>
         <parameter key="puli.resource_locator.path">%kernel.root_dir%/../vendor/resource-locator.php</parameter>
         <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
-        <parameter key="puli.resource_locator_factory.class">Webmozart\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
+        <parameter key="puli.resource_locator_factory.class">Puli\Extension\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
         <parameter key="puli.file_locator.chain.class">Webmozart\Puli\Extension\Symfony\Config\FileLocatorChain</parameter>
         <parameter key="puli.file_locator.kernel.class">Webmozart\Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator</parameter>
         <parameter key="puli.file_locator.puli.class">Webmozart\Puli\Extension\Symfony\Config\PuliFileLocator</parameter>

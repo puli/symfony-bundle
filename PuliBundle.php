@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Webmozart\Symfony\PuliBundle;
+namespace Puli\Extension\Symfony\PuliBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -17,6 +17,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
-class WebmozartPuliBundle extends Bundle
+class PuliBundle extends Bundle
 {
 }

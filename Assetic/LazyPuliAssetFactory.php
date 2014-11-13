@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Webmozart\Symfony\PuliBundle\Assetic;
+namespace Puli\Extension\Symfony\PuliBundle\Assetic;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Webmozart\Puli\Extension\Assetic\Factory\PuliAssetFactory;

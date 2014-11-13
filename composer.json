@@ -1,5 +1,5 @@
 {
-    "name": "webmozart/symfony-puli-bundle",
+    "name": "puli/symfony-puli-bundle",
     "description": "Integrates the Puli library into the Symfony2 full-stack framework.",
     "license": "MIT",
     "authors": [
@@ -20,14 +20,14 @@
     ],
     "require": {
         "symfony/symfony": "~2.3",
-        "webmozart/puli": "~1.0@dev",
-        "webmozart/composer-puli-plugin": "~1.0@dev",
+        "puli/puli": "~1.0@dev",
+        "puli/composer-puli-plugin": "~1.0@dev",
         "kriswallsmith/assetic": "dev-lazy-assetic-node as 1.2.x-dev",
         "symfony/assetic-bundle": "dev-lazy-assetic-node as 2.4.x-dev"
     },
     "autoload": {
         "psr-4": {
-            "Webmozart\\Symfony\\PuliBundle\\": ""
+            "Puli\\Extension\\Symfony\\PuliBundle\\": ""
         }
     },
     "extra": {
@@ -36,7 +36,7 @@
         },
         "resources": {
             "export": {
-                "/webmozart/symfony-puli-bundle": "Resources"
+                "/puli/symfony-puli-bundle": "Resources"
             },
             "override": {
                 "/symfony/framework-bundle": "../../symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources",

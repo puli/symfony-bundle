@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Webmozart\Symfony\PuliBundle\LocatorFactory;
+namespace Puli\Extension\Symfony\PuliBundle\LocatorFactory;
 
 /**
  * @since  1.0
