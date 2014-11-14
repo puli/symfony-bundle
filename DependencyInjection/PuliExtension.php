@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\Loader;
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
-class WebmozartPuliExtension extends Extension
+class PuliExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -32,8 +32,6 @@ class WebmozartPuliExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-        $loader->load('assetic.xml');
         $loader->load('twig.xml');
-        $loader->load('assetic_twig.xml');
     }
 }
