@@ -5,21 +5,21 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="puli.resource_locator.path">%kernel.root_dir%/../vendor/resource-locator.php</parameter>
-        <parameter key="puli.resource_locator.class">Webmozart\Puli\Locator\ResourceLocatorInterface</parameter>
-        <parameter key="puli.resource_locator_factory.class">Puli\Extension\Symfony\PuliBundle\LocatorFactory\ComposerLocatorFactory</parameter>
-        <parameter key="puli.file_locator.chain.class">Webmozart\Puli\Extension\Symfony\Config\FileLocatorChain</parameter>
-        <parameter key="puli.file_locator.kernel.class">Webmozart\Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator</parameter>
-        <parameter key="puli.file_locator.puli.class">Webmozart\Puli\Extension\Symfony\Config\PuliFileLocator</parameter>
-        <parameter key="puli.file_locator.paths.class">Webmozart\Puli\Extension\Symfony\Config\ChainableFileLocator</parameter>
+        <parameter key="puli.repository.path">%kernel.root_dir%/../vendor/resource-locator.php</parameter>
+        <parameter key="puli.repository.class">Puli\Repository\ResourceRepositoryInterface</parameter>
+        <parameter key="puli.repository_factory.class">Puli\Extension\Symfony\PuliBundle\RepositoryFactory\ComposerRepositoryFactory</parameter>
+        <parameter key="puli.file_locator.chain.class">Puli\Extension\Symfony\Config\FileLocatorChain</parameter>
+        <parameter key="puli.file_locator.kernel.class">Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator</parameter>
+        <parameter key="puli.file_locator.puli.class">Puli\Extension\Symfony\Config\PuliFileLocator</parameter>
+        <parameter key="puli.file_locator.paths.class">Puli\Extension\Symfony\Config\ChainableFileLocator</parameter>
     </parameters>
 
     <services>
-        <service id="puli.resource_locator"
-                 class="%puli.resource_locator.class%"
-                 factory-class="%puli.resource_locator_factory.class%"
+        <service id="puli.repository"
+                 class="%puli.repository.class%"
+                 factory-class="%puli.repository_factory.class%"
                  factory-method="createResourceLocator">
-            <argument type="string">%puli.resource_locator.path%</argument>
+            <argument type="string">%puli.repository.path%</argument>
         </service>
 
         <service id="puli.file_locator.kernel" class="%puli.file_locator.kernel.class%" public="false">
@@ -27,7 +27,7 @@
         </service>
 
         <service id="puli.file_locator.puli" class="%puli.file_locator.puli.class%" public="false">
-            <argument type="service" id="puli.resource_locator" />
+            <argument type="service" id="puli.repository" />
         </service>
 
         <service id="puli.file_locator.paths" class="%puli.file_locator.paths.class%" public="false">

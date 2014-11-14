@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Puli\Extension\Symfony\PuliBundle\LocatorFactory;
+namespace Puli\Extension\Symfony\PuliBundle\RepositoryFactory;
 
 /**
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
-class ComposerLocatorFactory
+class ComposerRepositoryFactory
 {
-    public static function createResourceLocator($pathToGeneratedLocator)
+    public static function createRepository($pathToGeneratedRepo)
     {
-        return require $pathToGeneratedLocator;
+        return require $pathToGeneratedRepo;
     }
 }
