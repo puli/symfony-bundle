@@ -18,7 +18,7 @@
         <service id="puli.repository"
                  class="%puli.repository.class%"
                  factory-class="%puli.repository_factory.class%"
-                 factory-method="createResourceLocator">
+                 factory-method="createRepository">
             <argument type="string">%puli.repository.path%</argument>
         </service>
 
