@@ -11,11 +11,12 @@
     "require": {
         "symfony/framework-bundle": "~2.3",
         "puli/puli": "~1.0@dev",
-        "puli/composer-puli-plugin": "~1.0@dev",
         "puli/symfony-puli-bridge": "~1.0@dev",
         "puli/twig-puli-extension": "~1.0@dev"
     },
     "suggest": {
+        "puli/puli-cli": "Manage Puli repositories with the Puli CLI.",
+        "puli/puli-composer-plugin": "Generate Puli repositories for Composer packages.",
         "symfony/security-bundle": "",
         "symfony/twig-bundle": "",
         "symfony/web-profiler-bundle": "",
@@ -31,30 +32,6 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
-        },
-        "puli": {
-            "resources": {
-                "/puli/symfony-puli-bundle": "Resources",
-                "/symfony/framework-bundle": [
-                    "@symfony/framework-bundle:Resources",
-                    "@symfony/symfony:src/Symfony/Bundle/FrameworkBundle/Resources"
-                ],
-                "/symfony/security-bundle": [
-                    "@symfony/security-bundle:Resources",
-                    "@symfony/symfony:src/Symfony/Bundle/SecurityBundle/Resources"
-                ],
-                "/symfony/twig-bundle": [
-                    "@symfony/twig-bundle:Resources",
-                    "@symfony/symfony:src/Symfony/Bundle/TwigBundle/Resources"
-                ],
-                "/symfony/web-profiler-bundle": [
-                    "@symfony/web-profiler-bundle:Resources",
-                    "@symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
-                ],
-                "/sensio/distribution-bundle": "@sensio/distribution-bundle:Resources",
-                "/sensio/framework-extra-bundle": "@sensio/framework-extra-bundle:Resources",
-                "/sensio/generator-bundle": "@sensio/generator-bundle:Resources"
-            }
         }
     }
 }
