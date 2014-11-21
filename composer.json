@@ -11,8 +11,10 @@
     "require": {
         "symfony/framework-bundle": "~2.3",
         "puli/puli": "~1.0@dev",
+        "puli/puli-package-manager": "~1.0@dev",
         "puli/symfony-puli-bridge": "~1.0@dev",
-        "puli/twig-puli-extension": "~1.0@dev"
+        "puli/twig-puli-extension": "~1.0@dev",
+        "puli/json": "~1.0@dev"
     },
     "suggest": {
         "puli/puli-cli": "Manage Puli repositories with the Puli CLI.",

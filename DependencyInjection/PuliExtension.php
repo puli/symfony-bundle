@@ -11,6 +11,7 @@
 
 namespace Puli\Extension\Symfony\PuliBundle\DependencyInjection;
 
+use Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler\SetResourceRepositoryPathPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -33,5 +34,7 @@ class PuliExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
         $loader->load('twig.xml');
+
+        $container->addCompilerPass(new SetResourceRepositoryPathPass());
     }
 }

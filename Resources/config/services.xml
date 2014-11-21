@@ -5,7 +5,6 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="puli.repository.path">%kernel.root_dir%/../vendor/resource-repository.php</parameter>
         <parameter key="puli.repository.class">Puli\Repository\ResourceRepositoryInterface</parameter>
         <parameter key="puli.repository_factory.class">Puli\Extension\Symfony\PuliBundle\RepositoryFactory\ComposerRepositoryFactory</parameter>
         <parameter key="puli.file_locator.chain.class">Puli\Extension\Symfony\Config\FileLocatorChain</parameter>
