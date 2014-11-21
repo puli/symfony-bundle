@@ -24,7 +24,7 @@ class SetResourceRepositoryPathPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        $rootDir = $container->getParameter('kernel.root_dir');
+        $rootDir = Path::canonicalize($container->getParameter('kernel.root_dir').'/..');
 
         // Bootstrap necessary Puli classes
         $configManager = PackageManager::createConfigManager();

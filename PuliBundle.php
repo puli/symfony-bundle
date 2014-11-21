@@ -11,6 +11,8 @@
 
 namespace Puli\Extension\Symfony\PuliBundle;
 
+use Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler\SetResourceRepositoryPathPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -19,4 +21,10 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class PuliBundle extends Bundle
 {
+    public function build(ContainerBuilder $container)
+    {
+        parent::build($container);
+
+        $container->addCompilerPass(new SetResourceRepositoryPathPass());
+    }
 }
