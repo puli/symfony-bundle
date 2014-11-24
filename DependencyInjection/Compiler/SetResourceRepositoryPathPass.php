@@ -11,7 +11,7 @@
 
 namespace Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler;
 
-use Puli\PackageManager\PackageManager;
+use Puli\PackageManager\ManagerFactory;
 use Puli\Util\Path;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -27,15 +27,11 @@ class SetResourceRepositoryPathPass implements CompilerPassInterface
         $rootDir = Path::canonicalize($container->getParameter('kernel.root_dir').'/..');
 
         // Bootstrap necessary Puli classes
-        $configManager = PackageManager::createConfigManager();
-        $environment = PackageManager::createEnvironment($configManager);
-        $globalConfig = $environment->getGlobalConfig();
-
-        // Read puli.json in the project's root directory
-        $rootConfig = $configManager->loadRootPackageConfig($rootDir.'/puli.json', $globalConfig);
+        $environment = ManagerFactory::createProjectEnvironment($rootDir);
+        $config = $environment->getProjectConfig();
 
         // Read the path of the generated repository
-        $repoPath = Path::makeAbsolute($rootConfig->getGeneratedResourceRepository(), $rootDir);
+        $repoPath = Path::makeAbsolute($config->getGeneratedResourceRepository(), $rootDir);
 
         // Set the parameter
         $container->setParameter('puli.repository.path', $repoPath);
