@@ -28,7 +28,7 @@ class SetResourceRepositoryPathPass implements CompilerPassInterface
 
         // Bootstrap necessary Puli classes
         $environment = ManagerFactory::createProjectEnvironment($rootDir);
-        $config = $environment->getProjectConfig();
+        $config = $environment->getRootPackageConfig();
 
         // Read the path of the generated repository
         $repoPath = Path::makeAbsolute($config->getGeneratedResourceRepository(), $rootDir);
