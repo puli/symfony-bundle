@@ -11,10 +11,10 @@
 
 namespace Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler;
 
-use Puli\PackageManager\ManagerFactory;
-use Puli\Util\Path;
+use Puli\RepositoryManager\ManagerFactory;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Webmozart\PathUtil\Path;
 
 /**
  * @since  1.0
