@@ -1,5 +1,5 @@
 {
-    "name": "puli/symfony-puli-bundle",
+    "name": "puli/symfony-bundle",
     "description": "Integrates the Puli library into the Symfony2 full-stack framework.",
     "license": "MIT",
     "authors": [
@@ -10,17 +10,14 @@
     ],
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "puli/puli": "~1.0@dev",
-        "puli/puli-repository-manager": "~1.0@dev",
-        "puli/symfony-puli-bridge": "~1.0@dev",
-        "puli/twig-puli-extension": "~1.0@dev",
+        "puli/repository": "~1.0@dev",
+        "puli/symfony-bridge": "~1.0@dev",
+        "puli/twig-extension": "~1.0@dev",
         "puli/assetic-puli-extension": "~1.0@dev",
         "webmozart/path-util": "~1.0"
     },
     "minimum-stability": "dev",
     "suggest": {
-        "puli/puli-cli": "Manage Puli repositories with the Puli CLI.",
-        "puli/puli-composer-plugin": "Generate Puli repositories for Composer packages.",
         "symfony/security-bundle": "",
         "symfony/twig-bundle": "",
         "symfony/web-profiler-bundle": "",

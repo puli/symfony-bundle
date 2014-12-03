@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Symfony Puli Bundle.
+ * This file is part of the puli/symfony-bundle package.
  *
  * (c) Bernhard Schussek <bschussek@gmail.com>
  *

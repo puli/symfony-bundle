@@ -1,12 +1,12 @@
 Symfony Puli Bundle
 ===================
 
-[![Build Status](https://travis-ci.org/puli/symfony-puli-bundle.svg?branch=master)](https://travis-ci.org/puli/symfony-puli-bundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-puli-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/puli/symfony-puli-bundle/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/48347c29-841e-47c5-9ab4-f9a5adf57747/mini.png)](https://insight.sensiolabs.com/projects/48347c29-841e-47c5-9ab4-f9a5adf57747)
-[![Latest Stable Version](https://poser.pugx.org/puli/symfony-puli-bundle/v/stable.png)](https://packagist.org/packages/puli/symfony-puli-bundle)
-[![Total Downloads](https://poser.pugx.org/puli/symfony-puli-bundle/downloads.png)](https://packagist.org/packages/puli/symfony-puli-bundle)
-[![Dependency Status](https://www.versioneye.com/php/puli:symfony-puli-bundle/1.0.0/badge.png)](https://www.versioneye.com/php/puli:symfony-puli-bundle/1.0.0)
+[![Build Status](https://travis-ci.org/puli/symfony-bundle.svg?branch=master)](https://travis-ci.org/puli/symfony-bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/puli/symfony-bundle/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/19a72e27-7c90-46e3-92b1-e96eee74eb9a/mini.png)](https://insight.sensiolabs.com/projects/19a72e27-7c90-46e3-92b1-e96eee74eb9a)
+[![Latest Stable Version](https://poser.pugx.org/puli/symfony-bundle/v/stable.png)](https://packagist.org/packages/puli/symfony-bundle)
+[![Total Downloads](https://poser.pugx.org/puli/symfony-bundle/downloads.png)](https://packagist.org/packages/puli/symfony-bundle)
+[![Dependency Status](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0/badge.png)](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0)
 
 Latest release: none
 
@@ -53,11 +53,11 @@ All contents of this package are licensed under the [MIT license].
 [Twig]: http://twig.sensiolabs.org
 [Symfony]: http://symfony.com
 [Bernhard Schussek]: http://webmozarts.com
-[The Community Contributors]: https://github.com/puli/symfony-puli-bundle/graphs/contributors
+[The Community Contributors]: https://github.com/puli/symfony-bundle/graphs/contributors
 [Getting Started]: http://puli.readthedocs.org/en/latest/getting-started.html
 [Puli Documentation]: http://puli.readthedocs.org/en/latest/index.html
 [Puli at a Glance]: http://puli.readthedocs.org/en/latest/at-a-glance.html
 [issue tracker]: https://github.com/puli/puli/issues
-[Git repository]: https://github.com/puli/symfony-puli-bundle
+[Git repository]: https://github.com/puli/symfony-bundle
 [@webmozart]: https://twitter.com/webmozart
 [MIT license]: LICENSE
