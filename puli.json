@@ -17,8 +17,8 @@
             "@?symfony/web-profiler-bundle:Resources",
             "@?symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
         ],
-        "/sensio/distribution-bundle": "@sensio/distribution-bundle:Resources",
-        "/sensio/framework-extra-bundle": "@sensio/framework-extra-bundle:Resources",
-        "/sensio/generator-bundle": "@sensio/generator-bundle:Resources"
+        "/sensio/distribution-bundle": "@?sensio/distribution-bundle:Resources",
+        "/sensio/framework-extra-bundle": "@?sensio/framework-extra-bundle:Resources",
+        "/sensio/generator-bundle": "@?sensio/generator-bundle:Resources"
     }
 }
