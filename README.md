@@ -1,14 +1,14 @@
 Symfony Puli Bundle
 ===================
 
-[![Build Status](https://travis-ci.org/puli/symfony-bundle.svg?branch=master)](https://travis-ci.org/puli/symfony-bundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/puli/symfony-bundle/?branch=master)
+[![Build Status](https://travis-ci.org/puli/symfony-bundle.svg?branch=1.0.0-alpha1)](https://travis-ci.org/puli/symfony-bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-bundle/badges/quality-score.png?b=1.0.0-alpha1)](https://scrutinizer-ci.com/g/puli/symfony-bundle/?branch=1.0.0-alpha1)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/19a72e27-7c90-46e3-92b1-e96eee74eb9a/mini.png)](https://insight.sensiolabs.com/projects/19a72e27-7c90-46e3-92b1-e96eee74eb9a)
 [![Latest Stable Version](https://poser.pugx.org/puli/symfony-bundle/v/stable.png)](https://packagist.org/packages/puli/symfony-bundle)
 [![Total Downloads](https://poser.pugx.org/puli/symfony-bundle/downloads.png)](https://packagist.org/packages/puli/symfony-bundle)
 [![Dependency Status](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0/badge.png)](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0)
 
-Latest release: none
+Latest release: [1.0.0-alpha1](https://packagist.org/packages/puli/symfony-bundle#1.0.0-alpha1)
 
 PHP >= 5.3.9
 
