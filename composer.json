@@ -10,10 +10,10 @@
     ],
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "puli/puli": "~1.0@dev",
-        "puli/symfony-bridge": "~1.0@dev",
-        "puli/twig-extension": "~1.0@dev",
-        "puli/assetic-extension": "~1.0@dev",
+        "puli/puli": "~1.0",
+        "puli/symfony-bridge": "~1.0",
+        "puli/twig-extension": "~1.0",
+        "puli/assetic-extension": "~1.0",
         "webmozart/path-util": "~1.0"
     },
     "minimum-stability": "dev",
