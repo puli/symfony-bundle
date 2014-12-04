@@ -5,13 +5,16 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="puli.assetic.asset_factory.class">Puli\Extension\Symfony\PuliBundle\Assetic\ContainerAwarePuliAssetFactory</parameter>
+        <parameter key="puli.assetic.asset_factory.class">Puli\Extension\Symfony\PuliBundle\Assetic\KernelAwarePuliAssetFactory</parameter>
     </parameters>
 
     <services>
         <service id="puli.assetic.asset_factory" class="%puli.assetic.asset_factory.class%" public="false">
             <argument type="service" id="puli.repository" />
+            <argument type="service" id="kernel" />
             <argument type="service" id="service_container" />
+            <argument type="service" id="assetic.parameter_bag" />
+            <argument>%assetic.read_from%</argument>
             <argument>%assetic.debug%</argument>
         </service>
 
