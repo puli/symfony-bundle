@@ -32,7 +32,7 @@ class SetResourceRepositoryPathPass implements CompilerPassInterface
         $config = $environment->getConfig();
 
         // Read the path of the resource repository
-        $repoPath = Path::makeAbsolute($config->get(Config::REPO_FILE), $rootDir);
+        $repoPath = Path::makeAbsolute($config->get(Config::READ_REPO), $rootDir);
 
         // Set the parameter
         $container->setParameter('puli.repository.path', $repoPath);
