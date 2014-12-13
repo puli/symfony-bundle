@@ -27,10 +27,19 @@ class PuliExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $bundles = $container->getParameter('kernel.bundles');
+        $templatingEngines = $container->getParameter('templating.engines');
+
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('assetic.xml');
-        $loader->load('assetic_twig.xml');
         $loader->load('services.xml');
-        $loader->load('twig.xml');
+
+        if (in_array('twig', $templatingEngines)) {
+            $loader->load('twig.xml');
+        }
+
+        if (isset($bundles['AsseticBundle'])) {
+            $loader->load('assetic.xml');
+            $loader->load('assetic_twig.xml');
+        }
     }
 }
