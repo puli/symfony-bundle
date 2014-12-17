@@ -18,6 +18,11 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Webmozart\PathUtil\Path;
 
 /**
+ * Sets the %puli.repository.path% parameter to the correct path of Puli's
+ * resource repository.
+ *
+ * This is necessary in order to skip the manager factory in production.
+ *
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
