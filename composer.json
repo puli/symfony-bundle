@@ -14,6 +14,10 @@
         "puli/symfony-bridge": "~1.0",
         "webmozart/path-util": "~1.0"
     },
+    "require-dev": {
+        "puli/assetic-extension": "~1.0",
+        "puli/twig-extension": "~1.0"
+    },
     "minimum-stability": "dev",
     "suggest": {
         "puli/assetic-extension": "For Puli support in Assetic.",

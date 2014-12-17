@@ -14,7 +14,7 @@ namespace Puli\Extension\Symfony\PuliBundle\Assetic;
 use Assetic\Asset\AssetInterface;
 use Assetic\Asset\AssetReference;
 use Puli\Extension\Assetic\Factory\PuliAssetFactory;
-use Puli\Repository\ResourceRepositoryInterface;
+use Puli\Repository\ResourceRepository;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -36,7 +36,7 @@ class KernelAwarePuliAssetFactory extends PuliAssetFactory
      */
     private $container;
 
-    public function __construct(ResourceRepositoryInterface $repo, KernelInterface $kernel, ContainerInterface $container, ParameterBagInterface $parameterBag, $baseDir, $debug = false)
+    public function __construct(ResourceRepository $repo, KernelInterface $kernel, ContainerInterface $container, ParameterBagInterface $parameterBag, $baseDir, $debug = false)
     {
         parent::__construct($repo, $baseDir, $debug);
 
