@@ -1,6 +1,7 @@
 {
     "name": "puli/symfony-bundle",
     "description": "Integrates the Puli library into the Symfony2 full-stack framework.",
+    "homepage": "http://puli.io",
     "license": "MIT",
     "authors": [
         {
