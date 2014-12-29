@@ -9,16 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace Puli\Extension\Symfony\PuliBundle\RepositoryFactory;
+namespace Puli\Extension\Symfony\PuliBundle\FactoryLoader;
 
 /**
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
-class ComposerRepositoryFactory
+class PuliFactoryLoader
 {
-    public static function createRepository($pathToGeneratedRepo)
+    public static function loadFactory($path, $className)
     {
-        return require $pathToGeneratedRepo;
+        require_once $path;
+
+        return new $className();
     }
 }

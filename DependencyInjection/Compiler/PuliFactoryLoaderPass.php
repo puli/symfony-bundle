@@ -26,7 +26,7 @@ use Webmozart\PathUtil\Path;
  * @since  1.0
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
-class SetResourceRepositoryPathPass implements CompilerPassInterface
+class PuliFactoryLoaderPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
@@ -36,10 +36,11 @@ class SetResourceRepositoryPathPass implements CompilerPassInterface
         $environment = ManagerFactory::createProjectEnvironment($rootDir);
         $config = $environment->getConfig();
 
-        // Read the path of the resource repository
-        $repoPath = Path::makeAbsolute($config->get(Config::READ_REPO), $rootDir);
+        $factoryPath = Path::makeAbsolute($config->get(Config::FACTORY_FILE), $rootDir);
+        $factoryClass = $config->get(Config::FACTORY_CLASS);
 
-        // Set the parameter
-        $container->setParameter('puli.repository.path', $repoPath);
+        // Set the parameters
+        $container->setParameter('puli.factory.path', $factoryPath);
+        $container->setParameter('puli.factory.class', $factoryClass);
     }
 }

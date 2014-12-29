@@ -1,157 +1,147 @@
 {
-    "resources": {
-        "/puli/symfony-puli-bundle": "Resources",
-        "/symfony/framework-bundle": [
-            "@?symfony/framework-bundle:Resources",
-            "@?symfony/symfony:src/Symfony/Bundle/FrameworkBundle/Resources"
-        ],
-        "/symfony/security-bundle": [
-            "@?symfony/security-bundle:Resources",
-            "@?symfony/symfony:src/Symfony/Bundle/SecurityBundle/Resources"
-        ],
-        "/symfony/twig-bundle": [
-            "@?symfony/twig-bundle:Resources",
-            "@?symfony/symfony:src/Symfony/Bundle/TwigBundle/Resources"
-        ],
-        "/symfony/web-profiler-bundle": [
-            "@?symfony/web-profiler-bundle:Resources",
-            "@?symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
-        ],
-        "/sensio/distribution-bundle": "@?sensio/distribution-bundle:Resources",
-        "/sensio/framework-extra-bundle": "@?sensio/framework-extra-bundle:Resources",
-        "/sensio/generator-bundle": "@?sensio/generator-bundle:Resources"
-    },
     "packages": {
         "seld/jsonlint": {
-            "installPath": "vendor/seld/jsonlint",
+            "install-path": "vendor/seld/jsonlint",
             "installer": "Composer"
         },
         "doctrine/lexer": {
-            "installPath": "vendor/doctrine/lexer",
+            "install-path": "vendor/doctrine/lexer",
             "installer": "Composer"
         },
         "doctrine/annotations": {
-            "installPath": "vendor/doctrine/annotations",
+            "install-path": "vendor/doctrine/annotations",
             "installer": "Composer"
         },
         "psr/log": {
-            "installPath": "vendor/psr/log",
+            "install-path": "vendor/psr/log",
             "installer": "Composer"
         },
         "webmozart/path-util": {
-            "installPath": "vendor/webmozart/path-util",
+            "install-path": "vendor/webmozart/path-util",
             "installer": "Composer"
         },
         "justinrainbow/json-schema": {
-            "installPath": "vendor/justinrainbow/json-schema",
+            "install-path": "vendor/justinrainbow/json-schema",
             "installer": "Composer"
         },
         "webmozart/json": {
-            "installPath": "vendor/webmozart/json",
+            "install-path": "vendor/webmozart/json",
             "installer": "Composer"
         },
         "puli/repository": {
-            "installPath": "vendor/puli/repository",
+            "install-path": "vendor/puli/repository",
             "installer": "Composer"
         },
         "puli/symfony-bridge": {
-            "installPath": "vendor/puli/symfony-bridge",
+            "install-path": "vendor/puli/symfony-bridge",
             "installer": "Composer"
         },
         "puli/repository-manager": {
-            "installPath": "vendor/puli/repository-manager",
+            "install-path": "vendor/puli/repository-manager",
             "installer": "Composer"
         },
         "puli/cli": {
-            "installPath": "vendor/puli/cli",
+            "install-path": "vendor/puli/cli",
             "installer": "Composer"
         },
         "puli/composer-plugin": {
-            "installPath": "vendor/puli/composer-plugin",
+            "install-path": "vendor/puli/composer-plugin",
             "installer": "Composer"
         },
         "puli/discovery": {
-            "installPath": "vendor/puli/discovery",
+            "install-path": "vendor/puli/discovery",
             "installer": "Composer"
         },
         "symfony/security-csrf": {
-            "installPath": "vendor/symfony/security-csrf/Symfony/Component/Security/Csrf",
-            "installer": "Composer"
-        },
-        "symfony/process": {
-            "installPath": "vendor/symfony/process/Symfony/Component/Process",
-            "installer": "Composer"
-        },
-        "symfony/templating": {
-            "installPath": "vendor/symfony/templating/Symfony/Component/Templating",
-            "installer": "Composer"
-        },
-        "symfony/stopwatch": {
-            "installPath": "vendor/symfony/stopwatch/Symfony/Component/Stopwatch",
-            "installer": "Composer"
-        },
-        "symfony/security-core": {
-            "installPath": "vendor/symfony/security-core/Symfony/Component/Security/Core",
-            "installer": "Composer"
-        },
-        "symfony/routing": {
-            "installPath": "vendor/symfony/routing/Symfony/Component/Routing",
-            "installer": "Composer"
-        },
-        "symfony/filesystem": {
-            "installPath": "vendor/symfony/filesystem/Symfony/Component/Filesystem",
-            "installer": "Composer"
-        },
-        "symfony/config": {
-            "installPath": "vendor/symfony/config/Symfony/Component/Config",
-            "installer": "Composer"
-        },
-        "symfony/translation": {
-            "installPath": "vendor/symfony/translation/Symfony/Component/Translation",
-            "installer": "Composer"
-        },
-        "symfony/debug": {
-            "installPath": "vendor/symfony/debug/Symfony/Component/Debug",
-            "installer": "Composer"
-        },
-        "symfony/http-foundation": {
-            "installPath": "vendor/symfony/http-foundation/Symfony/Component/HttpFoundation",
-            "installer": "Composer"
-        },
-        "symfony/event-dispatcher": {
-            "installPath": "vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher",
-            "installer": "Composer"
-        },
-        "symfony/http-kernel": {
-            "installPath": "vendor/symfony/http-kernel/Symfony/Component/HttpKernel",
-            "installer": "Composer"
-        },
-        "symfony/dependency-injection": {
-            "installPath": "vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection",
-            "installer": "Composer"
-        },
-        "symfony/framework-bundle": {
-            "installPath": "vendor/symfony/framework-bundle/Symfony/Bundle/FrameworkBundle",
-            "installer": "Composer"
-        },
-        "symfony/console": {
-            "installPath": "vendor/symfony/console/Symfony/Component/Console",
+            "install-path": "vendor/symfony/security-csrf/Symfony/Component/Security/Csrf",
             "installer": "Composer"
         },
         "twig/twig": {
-            "installPath": "vendor/twig/twig",
+            "install-path": "vendor/twig/twig",
             "installer": "Composer"
         },
         "puli/twig-extension": {
-            "installPath": "vendor/puli/twig-extension",
+            "install-path": "vendor/puli/twig-extension",
             "installer": "Composer"
         },
         "kriswallsmith/assetic": {
-            "installPath": "vendor/kriswallsmith/assetic",
+            "install-path": "vendor/kriswallsmith/assetic",
             "installer": "Composer"
         },
         "puli/assetic-extension": {
-            "installPath": "vendor/puli/assetic-extension",
+            "install-path": "vendor/puli/assetic-extension",
+            "installer": "Composer"
+        },
+        "webmozart/glob": {
+            "install-path": "vendor/webmozart/glob",
+            "installer": "Composer"
+        },
+        "webmozart/key-value-store": {
+            "install-path": "vendor/webmozart/key-value-store",
+            "installer": "Composer"
+        },
+        "beberlei/assert": {
+            "install-path": "vendor/beberlei/assert",
+            "installer": "Composer"
+        },
+        "symfony/process": {
+            "install-path": "vendor/symfony/process/Symfony/Component/Process",
+            "installer": "Composer"
+        },
+        "symfony/templating": {
+            "install-path": "vendor/symfony/templating/Symfony/Component/Templating",
+            "installer": "Composer"
+        },
+        "symfony/stopwatch": {
+            "install-path": "vendor/symfony/stopwatch/Symfony/Component/Stopwatch",
+            "installer": "Composer"
+        },
+        "symfony/security-core": {
+            "install-path": "vendor/symfony/security-core/Symfony/Component/Security/Core",
+            "installer": "Composer"
+        },
+        "symfony/routing": {
+            "install-path": "vendor/symfony/routing/Symfony/Component/Routing",
+            "installer": "Composer"
+        },
+        "symfony/filesystem": {
+            "install-path": "vendor/symfony/filesystem/Symfony/Component/Filesystem",
+            "installer": "Composer"
+        },
+        "symfony/config": {
+            "install-path": "vendor/symfony/config/Symfony/Component/Config",
+            "installer": "Composer"
+        },
+        "symfony/translation": {
+            "install-path": "vendor/symfony/translation/Symfony/Component/Translation",
+            "installer": "Composer"
+        },
+        "symfony/debug": {
+            "install-path": "vendor/symfony/debug/Symfony/Component/Debug",
+            "installer": "Composer"
+        },
+        "symfony/http-foundation": {
+            "install-path": "vendor/symfony/http-foundation/Symfony/Component/HttpFoundation",
+            "installer": "Composer"
+        },
+        "symfony/event-dispatcher": {
+            "install-path": "vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher",
+            "installer": "Composer"
+        },
+        "symfony/http-kernel": {
+            "install-path": "vendor/symfony/http-kernel/Symfony/Component/HttpKernel",
+            "installer": "Composer"
+        },
+        "symfony/dependency-injection": {
+            "install-path": "vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection",
+            "installer": "Composer"
+        },
+        "symfony/framework-bundle": {
+            "install-path": "vendor/symfony/framework-bundle/Symfony/Bundle/FrameworkBundle",
+            "installer": "Composer"
+        },
+        "symfony/console": {
+            "install-path": "vendor/symfony/console/Symfony/Component/Console",
             "installer": "Composer"
         }
     }

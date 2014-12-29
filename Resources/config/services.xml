@@ -5,11 +5,26 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+        <service id="puli.factory"
+                 class="%puli.factory.class%"
+                 factory-class="puli.factory"
+                 factory-method="createRepository"
+                 public="false">
+            <argument>%puli.factory.path%</argument>
+            <argument>%puli.factory.class%</argument>
+        </service>
+
         <service id="puli.repository"
-                 class="Puli\Repository\ResourceRepository"
-                 factory-class="Puli\Extension\Symfony\PuliBundle\RepositoryFactory\ComposerRepositoryFactory"
+                 class="Puli\Repository\Api\ResourceRepository"
+                 factory-service="puli.factory"
                  factory-method="createRepository">
-            <argument type="string">%puli.repository.path%</argument>
+        </service>
+
+        <service id="puli.discovery"
+                 class="Puli\Discovery\Api\ResourceDiscovery"
+                 factory-service="puli.factory"
+                 factory-method="createDiscovery">
+            <argument type="service" id="puli.repository" />
         </service>
 
         <service id="puli.file_locator.kernel" class="Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator" public="false">

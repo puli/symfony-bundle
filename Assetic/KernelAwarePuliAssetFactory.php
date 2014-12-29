@@ -14,7 +14,7 @@ namespace Puli\Extension\Symfony\PuliBundle\Assetic;
 use Assetic\Asset\AssetInterface;
 use Assetic\Asset\AssetReference;
 use Puli\Extension\Assetic\Factory\PuliAssetFactory;
-use Puli\Repository\ResourceRepository;
+use Puli\Repository\Api\ResourceRepository;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
