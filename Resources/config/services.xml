@@ -7,8 +7,8 @@
     <services>
         <service id="puli.factory"
                  class="%puli.factory.class%"
-                 factory-class="puli.factory"
-                 factory-method="createRepository"
+                 factory-class="Puli\Extension\Symfony\PuliBundle\FactoryLoader\PuliFactoryLoader"
+                 factory-method="loadFactory"
                  public="false">
             <argument>%puli.factory.path%</argument>
             <argument>%puli.factory.class%</argument>
