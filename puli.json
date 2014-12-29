@@ -1,4 +1,26 @@
 {
+    "resources": {
+        "/puli/symfony-puli-bundle": "Resources",
+        "/symfony/framework-bundle": [
+            "@?symfony/framework-bundle:Resources",
+            "@?symfony/symfony:src/Symfony/Bundle/FrameworkBundle/Resources"
+        ],
+        "/symfony/security-bundle": [
+            "@?symfony/security-bundle:Resources",
+            "@?symfony/symfony:src/Symfony/Bundle/SecurityBundle/Resources"
+        ],
+        "/symfony/twig-bundle": [
+            "@?symfony/twig-bundle:Resources",
+            "@?symfony/symfony:src/Symfony/Bundle/TwigBundle/Resources"
+        ],
+        "/symfony/web-profiler-bundle": [
+            "@?symfony/web-profiler-bundle:Resources",
+            "@?symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
+        ],
+        "/sensio/distribution-bundle": "@?sensio/distribution-bundle:Resources",
+        "/sensio/framework-extra-bundle": "@?sensio/framework-extra-bundle:Resources",
+        "/sensio/generator-bundle": "@?sensio/generator-bundle:Resources"
+    },
     "packages": {
         "seld/jsonlint": {
             "install-path": "vendor/seld/jsonlint",
