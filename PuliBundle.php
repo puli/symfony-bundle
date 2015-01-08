@@ -23,6 +23,15 @@ class PuliBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
+        if (!defined('PULI_FACTORY_CLASS')) {
+            throw new \RuntimeException(sprintf(
+                "The PULI_FACTORY_CLASS constant is missing. Resolutions:\n".
+                "(1) Install \"puli/cli\" and run \"bin/puli build\".\n".
+                "(2) Install \"puli/factory\", implement \"Puli\\Factory\\PuliFactory\" and set the constant manually.\n".
+                "If you don't know, do (1)."
+            ));
+        }
+
         parent::build($container);
 
         $container->addCompilerPass(new TwigLoaderPass());
