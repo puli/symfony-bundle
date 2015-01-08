@@ -11,7 +11,6 @@
 
 namespace Puli\Extension\Symfony\PuliBundle;
 
-use Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler\PuliFactoryLoaderPass;
 use Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler\TwigLoaderPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -26,7 +25,6 @@ class PuliBundle extends Bundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new PuliFactoryLoaderPass());
         $container->addCompilerPass(new TwigLoaderPass());
     }
 }
