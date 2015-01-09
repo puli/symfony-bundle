@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "puli/assetic-extension": "~1.0",
-        "puli/twig-extension": "~1.0"
+        "puli/twig-extension": "~1.0",
+        "puli/cli": "~1.0"
     },
     "minimum-stability": "dev",
     "suggest": {
