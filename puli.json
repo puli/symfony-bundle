@@ -1,6 +1,11 @@
 {
+    "version": "1.0",
+    "name": "puli/symfony-bundle",
     "resources": {
         "/puli/symfony-puli-bundle": "Resources",
+        "/sensio/distribution-bundle": "@?sensio/distribution-bundle:Resources",
+        "/sensio/framework-extra-bundle": "@?sensio/framework-extra-bundle:Resources",
+        "/sensio/generator-bundle": "@?sensio/generator-bundle:Resources",
         "/symfony/framework-bundle": [
             "@?symfony/framework-bundle:Resources",
             "@?symfony/symfony:src/Symfony/Bundle/FrameworkBundle/Resources"
@@ -16,10 +21,7 @@
         "/symfony/web-profiler-bundle": [
             "@?symfony/web-profiler-bundle:Resources",
             "@?symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
-        ],
-        "/sensio/distribution-bundle": "@?sensio/distribution-bundle:Resources",
-        "/sensio/framework-extra-bundle": "@?sensio/framework-extra-bundle:Resources",
-        "/sensio/generator-bundle": "@?sensio/generator-bundle:Resources"
+        ]
     },
     "packages": {
         "seld/jsonlint": {
@@ -164,6 +166,14 @@
         },
         "symfony/console": {
             "install-path": "vendor/symfony/console/Symfony/Component/Console",
+            "installer": "Composer"
+        },
+        "puli/factory": {
+            "install-path": "vendor/puli/factory",
+            "installer": "Composer"
+        },
+        "rhumsaa/uuid": {
+            "install-path": "vendor/rhumsaa/uuid",
             "installer": "Composer"
         }
     }
