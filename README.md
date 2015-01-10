@@ -49,14 +49,14 @@ License
 
 All contents of this package are licensed under the [MIT license].
 
-[Puli]: https://github.com/puli/puli
+[Puli]: http://puli.io
 [Twig]: http://twig.sensiolabs.org
 [Symfony]: http://symfony.com
 [Bernhard Schussek]: http://webmozarts.com
 [The Community Contributors]: https://github.com/puli/symfony-bundle/graphs/contributors
 [Using Puli with the Symfony Framework]: http://docs.puli.io/en/latest/extensions/symfony-framework.html
 [Puli at a Glance]: http://docs.puli.io/en/latest/at-a-glance.html
-[issue tracker]: https://github.com/puli/puli/issues
+[issue tracker]: https://github.com/puli/issues/issues
 [Git repository]: https://github.com/puli/symfony-bundle
 [@webmozart]: https://twitter.com/webmozart
 [MIT license]: LICENSE
