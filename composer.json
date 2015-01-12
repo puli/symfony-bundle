@@ -18,11 +18,11 @@
         "webmozart/path-util": "~1.0"
     },
     "require-dev": {
-        "puli/assetic-extension": "~1.0",
+        "puli/assetic-extension": "~1.0@dev",
         "puli/twig-extension": "~1.0",
         "puli/cli": "~1.0"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "suggest": {
         "puli/assetic-extension": "For Puli support in Assetic.",
         "puli/twig-extension": "For Puli support in Twig.",
