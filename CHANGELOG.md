@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-beta2 (2015-01-27)
+
+ * adapted to work with version 1.0.0-beta2 of the Puli components
+
 * 1.0.0-beta (2015-01-12)
 
  * Added support for the @Bundle/.. notation to the assetic factory
