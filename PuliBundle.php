@@ -34,6 +34,8 @@ class PuliBundle extends Bundle
 
         parent::build($container);
 
-        $container->addCompilerPass(new TwigLoaderPass());
+        if (class_exists('Puli\Extension\Twig\PuliExtension')) {
+            $container->addCompilerPass(new TwigLoaderPass());
+        }
     }
 }

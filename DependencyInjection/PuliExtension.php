@@ -33,12 +33,20 @@ class PuliExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        if (in_array('twig', $templatingEngines)) {
+        $twigLoaded = in_array('twig', $templatingEngines)
+            && class_exists('Puli\Extension\Twig\PuliExtension');
+        $asseticLoaded = isset($bundles['AsseticBundle'])
+            && class_exists('Puli\Extension\Assetic\Factory\PuliAssetFactory');
+
+        if ($twigLoaded) {
             $loader->load('twig.xml');
         }
 
-        if (isset($bundles['AsseticBundle'])) {
+        if ($asseticLoaded) {
             $loader->load('assetic.xml');
+        }
+
+        if ($twigLoaded && $asseticLoaded) {
             $loader->load('assetic_twig.xml');
         }
     }
