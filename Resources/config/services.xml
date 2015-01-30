@@ -26,6 +26,7 @@
 
         <service id="puli.file_locator.kernel" class="Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator" public="false">
             <argument type="service" id="kernel" />
+            <argument>%kernel.root_dir%/Resources</argument>
         </service>
 
         <service id="puli.file_locator.puli" class="Puli\Extension\Symfony\Config\PuliFileLocator" public="false">
