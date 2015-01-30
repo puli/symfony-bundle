@@ -24,8 +24,9 @@
     },
     "minimum-stability": "dev",
     "suggest": {
-        "puli/assetic-extension": "For Puli support in Assetic.",
-        "puli/twig-extension": "For Puli support in Twig.",
+        "puli/cli": "Adds the Puli Command Line Interface."
+        "puli/assetic-extension": "Enables Puli support in Assetic.",
+        "puli/twig-extension": "Enables Puli support in Twig.",
         "symfony/security-bundle": "",
         "symfony/twig-bundle": "",
         "symfony/web-profiler-bundle": "",
