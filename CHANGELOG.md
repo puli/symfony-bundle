@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-next (@release_date@)
+
+ * added support for puli/web-resource-plugin
+ 
 * 1.0.0-beta2 (2015-01-27)
 
  * adapted to work with version 1.0.0-beta2 of the Puli components
