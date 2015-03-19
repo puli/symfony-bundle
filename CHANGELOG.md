@@ -1,8 +1,10 @@
 Changelog
 =========
 
-* 1.0.0-next (@release_date@)
+* 1.0.0-beta3 (2015-03-19)
 
+ * fixed: added missing root directory to the kernel file locator
+ * fixed: the Twig extension and Assetic are only loaded if they are available
  * added support for puli/web-resource-plugin
  
 * 1.0.0-beta2 (2015-01-27)
