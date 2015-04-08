@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Puli\Extension\Symfony\PuliBundle\Assetic;
+namespace Puli\SymfonyBundle\Assetic;
 
 use Assetic\Asset\AssetInterface;
 use Assetic\Asset\AssetReference;

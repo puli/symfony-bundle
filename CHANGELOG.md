@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-next (@release_date@)
+
+ * moved all code to the `Puli\SymfonyBundle` namespace
+
 * 1.0.0-beta3 (2015-03-19)
 
  * fixed: added missing root directory to the kernel file locator

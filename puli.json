@@ -64,12 +64,12 @@
             "install-path": "vendor/puli/factory",
             "installer": "composer"
         },
-        "puli/repository": {
-            "install-path": "vendor/puli/repository",
+        "puli/manager": {
+            "install-path": "vendor/puli/manager",
             "installer": "composer"
         },
-        "puli/repository-manager": {
-            "install-path": "vendor/puli/repository-manager",
+        "puli/repository": {
+            "install-path": "vendor/puli/repository",
             "installer": "composer"
         },
         "puli/symfony-bridge": {
@@ -86,6 +86,10 @@
         },
         "seld/jsonlint": {
             "install-path": "vendor/seld/jsonlint",
+            "installer": "composer"
+        },
+        "symfony/asset": {
+            "install-path": "vendor/symfony/asset",
             "installer": "composer"
         },
         "symfony/config": {
@@ -154,6 +158,18 @@
         },
         "twig/twig": {
             "install-path": "vendor/twig/twig",
+            "installer": "composer"
+        },
+        "webmozart/assert": {
+            "install-path": "vendor/webmozart/assert",
+            "installer": "composer"
+        },
+        "webmozart/console": {
+            "install-path": "vendor/webmozart/console",
+            "installer": "composer"
+        },
+        "webmozart/expression": {
+            "install-path": "vendor/webmozart/expression",
             "installer": "composer"
         },
         "webmozart/glob": {

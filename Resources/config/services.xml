@@ -24,20 +24,20 @@
             <argument type="service" id="puli.repository" />
         </service>
 
-        <service id="puli.file_locator.kernel" class="Puli\Extension\Symfony\HttpKernel\ChainableKernelFileLocator" public="false">
+        <service id="puli.file_locator.kernel" class="Puli\SymfonyBridge\HttpKernel\ChainableKernelFileLocator" public="false">
             <argument type="service" id="kernel" />
             <argument>%kernel.root_dir%/Resources</argument>
         </service>
 
-        <service id="puli.file_locator.puli" class="Puli\Extension\Symfony\Config\PuliFileLocator" public="false">
+        <service id="puli.file_locator.puli" class="Puli\SymfonyBridge\Config\PuliFileLocator" public="false">
             <argument type="service" id="puli.repository" />
         </service>
 
-        <service id="puli.file_locator.paths" class="Puli\Extension\Symfony\Config\ChainableFileLocatorImpl" public="false">
+        <service id="puli.file_locator.paths" class="Puli\SymfonyBridge\Config\ChainableFileLocatorImpl" public="false">
             <argument>%kernel.root_dir%/Resources</argument>
         </service>
 
-        <service id="puli.file_locator.chain" class="Puli\Extension\Symfony\Config\FileLocatorChain" public="false">
+        <service id="puli.file_locator.chain" class="Puli\SymfonyBridge\Config\FileLocatorChain" public="false">
             <argument type="collection">
                 <argument type="service" id="puli.file_locator.kernel" />
                 <argument type="service" id="puli.file_locator.puli" />

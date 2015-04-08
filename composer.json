@@ -36,7 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Puli\\Extension\\Symfony\\PuliBundle\\": ""
+            "Puli\\SymfonyBundle\\": ""
         }
     },
     "extra": {

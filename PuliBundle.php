@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Puli\Extension\Symfony\PuliBundle;
+namespace Puli\SymfonyBundle;
 
-use Puli\Extension\Symfony\PuliBundle\DependencyInjection\Compiler\TwigLoaderPass;
+use Puli\SymfonyBundle\DependencyInjection\Compiler\TwigLoaderPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

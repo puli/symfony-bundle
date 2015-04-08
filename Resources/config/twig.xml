@@ -5,17 +5,17 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="puli.twig.extension" class="Puli\Extension\Twig\PuliExtension" public="false">
+        <service id="puli.twig.extension" class="Puli\TwigExtension\PuliExtension" public="false">
             <argument type="service" id="puli.repository" />
             <tag name="twig.extension" />
         </service>
 
-        <service id="puli.twig.template_loader" class="Puli\Extension\Twig\PuliTemplateLoader" public="false">
+        <service id="puli.twig.template_loader" class="Puli\TwigExtension\PuliTemplateLoader" public="false">
             <argument type="service" id="puli.repository" />
             <tag name="twig.loader"/>
         </service>
 
-        <service id="puli.twig.cache_warmer" class="Puli\Extension\Twig\CacheWarmer\TwigTemplateCacheWarmer" public="false">
+        <service id="puli.twig.cache_warmer" class="Puli\TwigExtension\CacheWarmer\TwigTemplateCacheWarmer" public="false">
             <argument type="service" id="puli.repository" />
             <argument type="service" id="twig" />
             <tag name="kernel.cache_warmer" />
