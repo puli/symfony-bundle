@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="puli.assetic.twig.extension" class="Puli\Extension\Assetic\Twig\PuliAsseticExtension" public="false">
+        <service id="puli.assetic.twig.extension" class="Puli\AsseticExtension\Twig\PuliAsseticExtension" public="false">
             <argument type="service" id="puli.repository" />
             <tag name="twig.extension" />
         </service>

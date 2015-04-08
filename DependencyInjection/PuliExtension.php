@@ -36,7 +36,7 @@ class PuliExtension extends Extension
         $twigLoaded = in_array('twig', $templatingEngines)
             && class_exists('Puli\TwigExtension\PuliExtension');
         $asseticLoaded = isset($bundles['AsseticBundle'])
-            && class_exists('Puli\Extension\Assetic\Factory\PuliAssetFactory');
+            && class_exists('Puli\AsseticExtension\Factory\PuliAssetFactory');
         $assetPluginLoaded = class_exists('Puli\AssetPlugin\Api\AssetPlugin');
 
         if ($twigLoaded) {

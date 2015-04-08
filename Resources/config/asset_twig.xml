@@ -7,7 +7,7 @@
     <services>
         <service id="puli.twig.extension" class="Puli\TwigExtension\PuliExtension" public="false">
             <argument type="service" id="puli.repository" />
-            <argument type="service" id="puli.asset_url_generator" />
+            <argument type="service" id="puli.asset.url_generator" />
             <tag name="twig.extension" />
         </service>
     </services>
