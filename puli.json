@@ -1,7 +1,7 @@
 {
     "version": "1.0",
     "name": "puli/symfony-bundle",
-    "resources": {
+    "path-mappings": {
         "/puli/symfony-puli-bundle": "Resources",
         "/sensio/distribution-bundle": "@sensio/distribution-bundle:Resources",
         "/sensio/framework-extra-bundle": "@sensio/framework-extra-bundle:Resources",
