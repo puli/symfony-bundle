@@ -1,7 +1,7 @@
 Changelog
 =========
 
-* 1.0.0-next (@release_date@)
+* 1.0.0-beta4 (2015-04-13)
 
  * moved all code to the `Puli\SymfonyBundle` namespace
 
