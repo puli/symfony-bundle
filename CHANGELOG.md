@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-next (@release_date@)
+
+ * removed unneeded dependency webmozart/path-util
+
 * 1.0.0-beta4 (2015-04-13)
 
  * moved all code to the `Puli\SymfonyBundle` namespace
