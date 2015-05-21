@@ -37,7 +37,6 @@ class PuliExtension extends Extension
             && class_exists('Puli\TwigExtension\PuliExtension');
         $asseticLoaded = isset($bundles['AsseticBundle'])
             && class_exists('Puli\AsseticExtension\Factory\PuliAssetFactory');
-        $assetPluginLoaded = class_exists('Puli\AssetPlugin\Api\AssetPlugin');
 
         if ($twigLoaded) {
             $loader->load('twig.xml');
@@ -48,14 +47,6 @@ class PuliExtension extends Extension
 
             if ($twigLoaded) {
                 $loader->load('assetic_twig.xml');
-            }
-        }
-
-        if ($assetPluginLoaded) {
-            $loader->load('asset.xml');
-
-            if ($twigLoaded) {
-                $loader->load('asset_twig.xml');
             }
         }
     }
