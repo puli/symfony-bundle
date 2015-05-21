@@ -32,10 +32,6 @@
             "install-path": "vendor/doctrine/lexer",
             "installer": "composer"
         },
-        "justinrainbow/json-schema": {
-            "install-path": "vendor/justinrainbow/json-schema",
-            "installer": "composer"
-        },
         "kriswallsmith/assetic": {
             "install-path": "vendor/kriswallsmith/assetic",
             "installer": "composer"
@@ -48,24 +44,12 @@
             "install-path": "vendor/puli/assetic-extension",
             "installer": "composer"
         },
-        "puli/cli": {
-            "install-path": "vendor/puli/cli",
-            "installer": "composer"
-        },
         "puli/composer-plugin": {
             "install-path": "vendor/puli/composer-plugin",
             "installer": "composer"
         },
         "puli/discovery": {
             "install-path": "vendor/puli/discovery",
-            "installer": "composer"
-        },
-        "puli/factory": {
-            "install-path": "vendor/puli/factory",
-            "installer": "composer"
-        },
-        "puli/manager": {
-            "install-path": "vendor/puli/manager",
             "installer": "composer"
         },
         "puli/repository": {
@@ -80,12 +64,8 @@
             "install-path": "vendor/puli/twig-extension",
             "installer": "composer"
         },
-        "rhumsaa/uuid": {
-            "install-path": "vendor/rhumsaa/uuid",
-            "installer": "composer"
-        },
-        "seld/jsonlint": {
-            "install-path": "vendor/seld/jsonlint",
+        "puli/url-generator": {
+            "install-path": "vendor/puli/url-generator",
             "installer": "composer"
         },
         "symfony/asset": {
@@ -93,67 +73,63 @@
             "installer": "composer"
         },
         "symfony/config": {
-            "install-path": "vendor/symfony/config/Symfony/Component/Config",
-            "installer": "composer"
-        },
-        "symfony/console": {
-            "install-path": "vendor/symfony/console/Symfony/Component/Console",
+            "install-path": "vendor/symfony/config",
             "installer": "composer"
         },
         "symfony/debug": {
-            "install-path": "vendor/symfony/debug/Symfony/Component/Debug",
+            "install-path": "vendor/symfony/debug",
             "installer": "composer"
         },
         "symfony/dependency-injection": {
-            "install-path": "vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection",
+            "install-path": "vendor/symfony/dependency-injection",
             "installer": "composer"
         },
         "symfony/event-dispatcher": {
-            "install-path": "vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher",
+            "install-path": "vendor/symfony/event-dispatcher",
             "installer": "composer"
         },
         "symfony/filesystem": {
-            "install-path": "vendor/symfony/filesystem/Symfony/Component/Filesystem",
+            "install-path": "vendor/symfony/filesystem",
             "installer": "composer"
         },
         "symfony/framework-bundle": {
-            "install-path": "vendor/symfony/framework-bundle/Symfony/Bundle/FrameworkBundle",
+            "install-path": "vendor/symfony/framework-bundle",
             "installer": "composer"
         },
         "symfony/http-foundation": {
-            "install-path": "vendor/symfony/http-foundation/Symfony/Component/HttpFoundation",
+            "install-path": "vendor/symfony/http-foundation",
             "installer": "composer"
         },
         "symfony/http-kernel": {
-            "install-path": "vendor/symfony/http-kernel/Symfony/Component/HttpKernel",
+            "install-path": "vendor/symfony/http-kernel",
             "installer": "composer"
         },
         "symfony/process": {
-            "install-path": "vendor/symfony/process/Symfony/Component/Process",
+            "install-path": "vendor/symfony/process",
             "installer": "composer"
         },
         "symfony/routing": {
-            "install-path": "vendor/symfony/routing/Symfony/Component/Routing",
+            "install-path": "vendor/symfony/routing",
             "installer": "composer"
         },
         "symfony/security-core": {
-            "install-path": "vendor/symfony/security-core/Symfony/Component/Security/Core",
+            "install-path": "vendor/symfony/security-core",
             "installer": "composer"
         },
         "symfony/security-csrf": {
-            "install-path": "vendor/symfony/security-csrf/Symfony/Component/Security/Csrf",
+            "install-path": "vendor/symfony/security-csrf",
             "installer": "composer"
         },
         "symfony/stopwatch": {
-            "install-path": "vendor/symfony/stopwatch/Symfony/Component/Stopwatch",
+            "install-path": "vendor/symfony/stopwatch",
             "installer": "composer"
         },
         "symfony/templating": {
-            "install-path": "vendor/symfony/templating/Symfony/Component/Templating",
+            "install-path": "vendor/symfony/templating",
             "installer": "composer"
         },
         "symfony/translation": {
-            "install-path": "vendor/symfony/translation/Symfony/Component/Translation",
+            "install-path": "vendor/symfony/translation",
             "installer": "composer"
         },
         "twig/twig": {
@@ -164,20 +140,8 @@
             "install-path": "vendor/webmozart/assert",
             "installer": "composer"
         },
-        "webmozart/console": {
-            "install-path": "vendor/webmozart/console",
-            "installer": "composer"
-        },
-        "webmozart/expression": {
-            "install-path": "vendor/webmozart/expression",
-            "installer": "composer"
-        },
         "webmozart/glob": {
             "install-path": "vendor/webmozart/glob",
-            "installer": "composer"
-        },
-        "webmozart/json": {
-            "install-path": "vendor/webmozart/json",
             "installer": "composer"
         },
         "webmozart/key-value-store": {
