@@ -1,9 +1,11 @@
 Changelog
 =========
 
-* 1.0.0-next (@release_date@)
+* 1.0.0-beta5 (2015-05-29)
 
  * removed unneeded dependency webmozart/path-util
+ * integrated puli/url-generator
+ * added puli/composer-plugin dependency
 
 * 1.0.0-beta4 (2015-04-13)
 
