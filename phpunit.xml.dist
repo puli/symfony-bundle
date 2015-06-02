@@ -19,7 +19,7 @@
 
     <testsuites>
         <testsuite name="Symfony Puli Bundle Test Suite">
-            <directory>./tests/</directory>
+            <directory>./Tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

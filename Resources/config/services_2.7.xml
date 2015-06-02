@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="puli.repository" class="Puli\Repository\Api\ResourceRepository">
+            <factory service="puli.factory" method="createRepository" />
+        </service>
+
+        <service id="puli.discovery" class="Puli\Discovery\Api\ResourceDiscovery">
+            <factory service="puli.factory" method="createDiscovery" />
+            <argument type="service" id="puli.repository" />
+        </service>
+
+        <service id="puli.url_generator" class="Puli\UrlGenerator\Api\UrlGenerator">
+            <factory service="puli.factory" method="createUrlGenerator" />
+            <argument type="service" id="puli.discovery" />
+        </service>
+    </services>
+</container>

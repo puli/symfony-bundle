@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "~2.3",
+        "symfony/framework-bundle": "^2.3",
         "puli/repository": "1.0.*",
         "puli/discovery": "~1.0",
         "puli/url-generator": "~1.0",
@@ -18,19 +18,13 @@
         "puli/symfony-bridge": "~1.0"
     },
     "require-dev": {
-        "puli/assetic-extension": "~1.0",
-        "puli/twig-extension": "~1.0"
+        "symfony/twig-bundle": "^2.3",
+        "puli/twig-extension": "~1.0",
+        "phpunit/phpunit": "^4.6"
     },
     "minimum-stability": "dev",
     "suggest": {
-        "puli/assetic-extension": "Enables Puli support in Assetic.",
-        "puli/twig-extension": "Enables Puli support in Twig.",
-        "symfony/security-bundle": "",
-        "symfony/twig-bundle": "",
-        "symfony/web-profiler-bundle": "",
-        "sensio/distribution-bundle": "",
-        "sensio/framework-extra-bundle": "",
-        "sensio/generator-bundle": ""
+        "puli/twig-extension": "Enables Puli support in Twig."
     },
     "autoload": {
         "psr-4": {

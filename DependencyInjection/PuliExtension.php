@@ -27,27 +27,22 @@ class PuliExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $bundles = $container->getParameter('kernel.bundles');
-        $templatingEngines = $container->getParameter('templating.engines');
+        $engines = $container->getParameter('templating.engines');
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        $twigLoaded = in_array('twig', $templatingEngines)
-            && class_exists('Puli\TwigExtension\PuliExtension');
-        $asseticLoaded = isset($bundles['AsseticBundle'])
-            && class_exists('Puli\AsseticExtension\Factory\PuliAssetFactory');
-
-        if ($twigLoaded) {
-            $loader->load('twig.xml');
+        if (method_exists('Symfony\Component\DependencyInjection\Definition', 'setFactory')) {
+            $loader->load('services_2.7.xml');
+        } else {
+            $loader->load('services_2.6.xml');
         }
 
-        if ($asseticLoaded) {
-            $loader->load('assetic.xml');
+        $twigEnabledInProject = in_array('twig', $engines);
+        $twigExtensionLoaded = class_exists('Puli\TwigExtension\PuliExtension');
 
-            if ($twigLoaded) {
-                $loader->load('assetic_twig.xml');
-            }
+        if ($twigEnabledInProject && $twigExtensionLoaded) {
+            $loader->load('twig.xml');
         }
     }
 }
