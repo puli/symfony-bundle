@@ -20,6 +20,8 @@ use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
+use Twig_Environment;
+use Twig_Loader_Chain;
 
 /**
  * @since  1.0
@@ -65,6 +67,25 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $container = $this->createContainer(array('twig'));
 
         $this->assertInstanceOf('Twig_Environment', $container->get('twig'));
+
+        /** @var Twig_Environment $twig */
+        $twig = $container->get('twig');
+
+        $this->assertInstanceOf('Puli\TwigExtension\PuliExtension', $twig->getExtension('puli'));
+        $this->assertInstanceOf('Twig_Loader_Chain', $twig->getLoader());
+
+        $chainDefinition = $container->getDefinition('twig.loader');
+        $methodCalls = $chainDefinition->getMethodCalls();
+
+        $this->assertCount(3, $methodCalls);
+
+        // Puli loader is inserted first
+        $this->assertSame('addLoader', $methodCalls[0][0]);
+        $this->assertSame('Puli\TwigExtension\PuliTemplateLoader', $methodCalls[0][1][0]->getClass());
+        $this->assertSame('addLoader', $methodCalls[1][0]);
+        $this->assertSame('Twig_Loader_Filesystem', $methodCalls[1][1][0]->getClass());
+        $this->assertSame('addLoader', $methodCalls[2][0]);
+        $this->assertSame('Twig_Loader_Filesystem', $methodCalls[2][1][0]->getClass());
     }
 
     private function createContainer(array $templatingEngines = array())

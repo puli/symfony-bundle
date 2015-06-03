@@ -41,7 +41,8 @@ class TwigLoaderPass implements CompilerPassInterface
         $chainLoader = $container->getDefinition('twig.loader.chain');
 
         $methodCalls = $chainLoader->getMethodCalls();
-        $symfonyKey = null;
+        $symfonyKey1 = null;
+        $symfonyKey2 = null;
         $puliKey = null;
 
         // By default, the filesystem loader is added before the Puli loader
@@ -50,7 +51,12 @@ class TwigLoaderPass implements CompilerPassInterface
         // loader
         foreach ($methodCalls as $key => $methodCall) {
             if ($this->isAddLoaderCall($methodCall, 'twig.loader.filesystem')) {
-                $symfonyKey = $key;
+                $symfonyKey1 = $key;
+                continue;
+            }
+
+            if ($this->isAddLoaderCall($methodCall, 'twig.loader.native_filesystem')) {
+                $symfonyKey2 = $key;
                 continue;
             }
 
@@ -60,15 +66,23 @@ class TwigLoaderPass implements CompilerPassInterface
             }
         }
 
-        // Move the Puli loader before the filesystem loader if necessary
-        if (null !== $symfonyKey && null !== $puliKey && $puliKey > $symfonyKey) {
-            $puliLoaderCall = $methodCalls[$puliKey];
-            unset($methodCalls[$puliKey]);
-
-            array_splice($methodCalls, $symfonyKey, 0, array($puliLoaderCall));
-
-            $chainLoader->setMethodCalls($methodCalls);
+        // Move the Puli loader before the filesystem loaders if necessary
+        if ((null === $symfonyKey1 && null === $symfonyKey2) || null === $puliKey) {
+            return;
         }
+
+        $symfonyKey = min($symfonyKey1, $symfonyKey2);
+
+        if ($puliKey < $symfonyKey) {
+            return;
+        }
+
+        $puliLoaderCall = $methodCalls[$puliKey];
+        unset($methodCalls[$puliKey]);
+
+        array_splice($methodCalls, $symfonyKey, 0, array($puliLoaderCall));
+
+        $chainLoader->setMethodCalls($methodCalls);
     }
 
     private function isAddLoaderCall(array $methodCall, $serviceId)
