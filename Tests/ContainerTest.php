@@ -53,7 +53,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
 
     public function testContainer()
     {
-        $container = $this->createContainer();
+        $container = $this->createContainer(false);
 
         $this->assertInstanceOf('Puli\Repository\Api\ResourceRepository', $container->get('puli.repository'));
         $this->assertInstanceOf('Puli\Discovery\Api\ResourceDiscovery', $container->get('puli.discovery'));
@@ -63,7 +63,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
 
     public function testTwigLoaded()
     {
-        $container = $this->createContainer(array('twig'));
+        $container = $this->createContainer(true);
 
         $this->assertInstanceOf('Twig_Environment', $container->get('twig'));
 
@@ -89,7 +89,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
 
     public function testTwigDisabled()
     {
-        $container = $this->createContainer(array('twig'), array('twig' => false));
+        $container = $this->createContainer(true, array('twig' => false));
 
         /** @var Twig_Environment $twig */
         $twig = $container->get('twig');
@@ -102,35 +102,37 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $this->assertCount(2, $methodCalls);
     }
 
-    private function createContainer(array $templatingEngines = array(), array $config = array())
+    private function createContainer($twig, array $config = array())
     {
-        $frameworkBundle = new FrameworkBundle();
-        $twigBundle = new TwigBundle();
-        $puliBundle = new PuliBundle();
+        $bundles = array(
+            'FrameworkBundle' => new FrameworkBundle(),
+            'PuliBundle' => new PuliBundle(),
+        );
+
+        if ($twig) {
+            $bundles['TwigBundle'] = new TwigBundle();
+        }
 
         $container = new ContainerBuilder(new ParameterBag(array(
             'kernel.debug' => false,
-            'kernel.bundles' => array(
-                'FrameworkBundle' => get_class($frameworkBundle),
-                'TwigBundle' => get_class($twigBundle),
-                'PuliBundle' => get_class($puliBundle),
-            ),
+            'kernel.bundles' => array_map(function ($bundle) {
+                return get_class($bundle);
+            }, $bundles),
             'kernel.cache_dir' => $this->rootDir,
             'kernel.root_dir' => $this->rootDir,
             'kernel.charset' => 'UTF-8',
             'kernel.secret' => '$ecret',
             'kernel.environment' => 'test',
-            'templating.engines' => $templatingEngines,
         )));
 
 
-        foreach (array($frameworkBundle, $twigBundle, $puliBundle) as $bundle) {
+        foreach ($bundles as $name => $bundle) {
             /** @var BundleInterface $bundle */
             $extension = $bundle->getContainerExtension();
             $container->registerExtension($extension);
 
             // Load bundle services
-            $extension->load($bundle === $puliBundle ? array($config) : array(), $container);
+            $extension->load('PuliBundle' === $name ? array($config) : array(), $container);
 
             // Load compiler passes
             $bundle->build($container);

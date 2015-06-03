@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-next (@release_date@)
+
+ * removed dependency on the "templating.engines" parameter
+
 * 1.0.0-beta6 (2015-05-03)
 
  * fixed deprecation notes on Symfony 2.7

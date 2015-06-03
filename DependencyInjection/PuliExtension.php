@@ -27,7 +27,7 @@ class PuliExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $engines = $container->getParameter('templating.engines');
+        $bundles = $container->getParameter('kernel.bundles');
 
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
@@ -41,11 +41,11 @@ class PuliExtension extends Extension
             $loader->load('services-2.6.xml');
         }
 
-        $twigEngineLoaded = in_array('twig', $engines);
+        $twigBundleLoaded = isset($bundles['TwigBundle']);
         $twigExtensionLoaded = class_exists('Puli\TwigExtension\PuliExtension');
         $twigEnabled = $config['twig'];
 
-        if ($twigEngineLoaded && $twigExtensionLoaded && $twigEnabled) {
+        if ($twigBundleLoaded && $twigExtensionLoaded && $twigEnabled) {
             $loader->load('twig.xml');
         }
     }
