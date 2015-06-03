@@ -33,9 +33,9 @@ class PuliExtension extends Extension
         $loader->load('services.xml');
 
         if (method_exists('Symfony\Component\DependencyInjection\Definition', 'setFactory')) {
-            $loader->load('services_2.7.xml');
+            $loader->load('services-2.7.xml');
         } else {
-            $loader->load('services_2.6.xml');
+            $loader->load('services-2.6.xml');
         }
 
         $twigEnabledInProject = in_array('twig', $engines);
