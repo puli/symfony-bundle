@@ -14,7 +14,7 @@ PHP >= 5.3.9
 
 The Puli Bundle integrates the [Puli] library into the [Symfony] framework. The
 bundle adds support for Puli paths in [Twig] templates and Symfony configuration
-files. Support for Assetic is work in progress.
+files.
 
 Read [Puli at a Glance] if you want to learn more about Puli.
 

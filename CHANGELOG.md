@@ -6,6 +6,7 @@ Changelog
  * fixed deprecation notes on Symfony 2.7
  * fixed non-working configuration of the PuliExtension service
  * added configuration setting "twig" to disable Twig support
+ * removed support for Assetic
 
 * 1.0.0-beta5 (2015-05-29)
 
