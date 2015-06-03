@@ -1,6 +1,12 @@
 Changelog
 =========
 
+* 1.0.0-beta6 (2015-05-03)
+
+ * fixed deprecation notes on Symfony 2.7
+ * fixed non-working configuration of the PuliExtension service
+ * added configuration setting "twig" to disable Twig support
+
 * 1.0.0-beta5 (2015-05-29)
 
  * removed unneeded dependency webmozart/path-util
