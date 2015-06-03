@@ -21,7 +21,6 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Twig_Environment;
-use Twig_Loader_Chain;
 
 /**
  * @since  1.0
@@ -62,7 +61,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Puli\SymfonyBridge\Config\FileLocatorChain', $container->get('file_locator'));
     }
 
-    public function testTwigContainer()
+    public function testTwigLoaded()
     {
         $container = $this->createContainer(array('twig'));
 
@@ -88,7 +87,22 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $this->assertSame('Twig_Loader_Filesystem', $methodCalls[2][1][0]->getClass());
     }
 
-    private function createContainer(array $templatingEngines = array())
+    public function testTwigDisabled()
+    {
+        $container = $this->createContainer(array('twig'), array('twig' => false));
+
+        /** @var Twig_Environment $twig */
+        $twig = $container->get('twig');
+
+        $this->assertFalse($twig->hasExtension('puli'));
+
+        $chainDefinition = $container->getDefinition('twig.loader');
+        $methodCalls = $chainDefinition->getMethodCalls();
+
+        $this->assertCount(2, $methodCalls);
+    }
+
+    private function createContainer(array $templatingEngines = array(), array $config = array())
     {
         $frameworkBundle = new FrameworkBundle();
         $twigBundle = new TwigBundle();
@@ -116,7 +130,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
             $container->registerExtension($extension);
 
             // Load bundle services
-            $extension->load(array(), $container);
+            $extension->load($bundle === $puliBundle ? array($config) : array(), $container);
 
             // Load compiler passes
             $bundle->build($container);
