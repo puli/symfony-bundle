@@ -24,6 +24,7 @@ use Twig_Environment;
 
 /**
  * @since  1.0
+ *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
 class ContainerTest extends PHPUnit_Framework_TestCase
@@ -36,7 +37,8 @@ class ContainerTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        while (false === @mkdir($this->tempDir = sys_get_temp_dir().'/puli-bundle/ContainerTest'.rand(10000, 99999), 0777, true)) {}
+        while (false === @mkdir($this->tempDir = sys_get_temp_dir().'/puli-bundle/ContainerTest'.rand(10000, 99999), 0777, true)) {
+        }
 
         $this->rootDir = $this->tempDir.'/root';
         $this->cacheDir = $this->tempDir.'/cache';
@@ -125,9 +127,8 @@ class ContainerTest extends PHPUnit_Framework_TestCase
             'kernel.environment' => 'test',
         )));
 
-
         foreach ($bundles as $name => $bundle) {
-            /** @var BundleInterface $bundle */
+            /* @var BundleInterface $bundle */
             $extension = $bundle->getContainerExtension();
             $container->registerExtension($extension);
 
@@ -149,5 +150,4 @@ class ContainerTest extends PHPUnit_Framework_TestCase
 
         return $container;
     }
-
 }

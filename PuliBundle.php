@@ -12,12 +12,12 @@
 namespace Puli\SymfonyBundle;
 
 use Puli\SymfonyBundle\DependencyInjection\Compiler\TwigLoaderPass;
-use RuntimeException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * @since  1.0
+ *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
 class PuliBundle extends Bundle

@@ -28,6 +28,7 @@ use Symfony\Component\DependencyInjection\Reference;
  * exception anymore.
  *
  * @since  1.0
+ *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
 class TwigLoaderPass implements CompilerPassInterface
@@ -92,4 +93,3 @@ class TwigLoaderPass implements CompilerPassInterface
             && $serviceId === (string) $methodCall[1][0];
     }
 }
-
