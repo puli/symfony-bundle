@@ -1,7 +1,7 @@
 Changelog
 =========
 
-* 1.0.0-next (@release_date@)
+* 1.0.0-beta7 (2015-08-12)
 
  * removed dependency on the "templating.engines" parameter
 
