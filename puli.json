@@ -24,11 +24,6 @@
         ]
     },
     "packages": {
-        "dflydev/markdown": {
-            "install-path": "vendor/dflydev/markdown",
-            "installer": "composer",
-            "env": "dev"
-        },
         "doctrine/annotations": {
             "install-path": "vendor/doctrine/annotations",
             "installer": "composer"
@@ -195,12 +190,12 @@
             "installer": "composer"
         },
         "symfony/console": {
-            "install-path": "vendor/symfony/console/Symfony/Component/Console",
+            "install-path": "vendor/symfony/console",
             "installer": "composer",
             "env": "dev"
         },
         "symfony/debug": {
-            "install-path": "vendor/symfony/debug/Symfony/Component/Debug",
+            "install-path": "vendor/symfony/debug",
             "installer": "composer"
         },
         "symfony/dependency-injection": {
@@ -208,15 +203,15 @@
             "installer": "composer"
         },
         "symfony/event-dispatcher": {
-            "install-path": "vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher",
+            "install-path": "vendor/symfony/event-dispatcher",
             "installer": "composer"
         },
         "symfony/filesystem": {
-            "install-path": "vendor/symfony/filesystem/Symfony/Component/Filesystem",
+            "install-path": "vendor/symfony/filesystem",
             "installer": "composer"
         },
         "symfony/finder": {
-            "install-path": "vendor/symfony/finder/Symfony/Component/Finder",
+            "install-path": "vendor/symfony/finder",
             "installer": "composer",
             "env": "dev"
         },
@@ -225,7 +220,7 @@
             "installer": "composer"
         },
         "symfony/http-foundation": {
-            "install-path": "vendor/symfony/http-foundation/Symfony/Component/HttpFoundation",
+            "install-path": "vendor/symfony/http-foundation",
             "installer": "composer"
         },
         "symfony/http-kernel": {
@@ -233,27 +228,27 @@
             "installer": "composer"
         },
         "symfony/process": {
-            "install-path": "vendor/symfony/process/Symfony/Component/Process",
+            "install-path": "vendor/symfony/process",
             "installer": "composer"
         },
         "symfony/routing": {
-            "install-path": "vendor/symfony/routing/Symfony/Component/Routing",
+            "install-path": "vendor/symfony/routing",
             "installer": "composer"
         },
         "symfony/security-core": {
-            "install-path": "vendor/symfony/security-core/Symfony/Component/Security/Core",
+            "install-path": "vendor/symfony/security-core",
             "installer": "composer"
         },
         "symfony/security-csrf": {
-            "install-path": "vendor/symfony/security-csrf/Symfony/Component/Security/Csrf",
+            "install-path": "vendor/symfony/security-csrf",
             "installer": "composer"
         },
         "symfony/stopwatch": {
-            "install-path": "vendor/symfony/stopwatch/Symfony/Component/Stopwatch",
+            "install-path": "vendor/symfony/stopwatch",
             "installer": "composer"
         },
         "symfony/templating": {
-            "install-path": "vendor/symfony/templating/Symfony/Component/Templating",
+            "install-path": "vendor/symfony/templating",
             "installer": "composer"
         },
         "symfony/translation": {
@@ -271,7 +266,7 @@
             "env": "dev"
         },
         "symfony/yaml": {
-            "install-path": "vendor/symfony/yaml/Symfony/Component/Yaml",
+            "install-path": "vendor/symfony/yaml",
             "installer": "composer",
             "env": "dev"
         },
