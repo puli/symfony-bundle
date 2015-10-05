@@ -23,6 +23,9 @@
             "@symfony/symfony:src/Symfony/Bundle/WebProfilerBundle/Resources"
         ]
     },
+    "config": {
+        "bootstrap-file": "vendor/autoload.php"
+    },
     "packages": {
         "doctrine/annotations": {
             "install-path": "vendor/doctrine/annotations",
@@ -138,8 +141,7 @@
         },
         "ramsey/uuid": {
             "install-path": "vendor/ramsey/uuid",
-            "installer": "composer",
-            "env": "dev"
+            "installer": "composer"
         },
         "sebastian/comparator": {
             "install-path": "vendor/sebastian/comparator",
@@ -286,8 +288,7 @@
         },
         "webmozart/expression": {
             "install-path": "vendor/webmozart/expression",
-            "installer": "composer",
-            "env": "dev"
+            "installer": "composer"
         },
         "webmozart/glob": {
             "install-path": "vendor/webmozart/glob",

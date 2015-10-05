@@ -58,7 +58,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $container = $this->createContainer(false);
 
         $this->assertInstanceOf('Puli\Repository\Api\ResourceRepository', $container->get('puli.repository'));
-        $this->assertInstanceOf('Puli\Discovery\Api\ResourceDiscovery', $container->get('puli.discovery'));
+        $this->assertInstanceOf('Puli\Discovery\Api\Discovery', $container->get('puli.discovery'));
         $this->assertInstanceOf('Puli\UrlGenerator\Api\UrlGenerator', $container->get('puli.url_generator'));
         $this->assertInstanceOf('Puli\SymfonyBridge\Config\FileLocatorChain', $container->get('file_locator'));
     }
