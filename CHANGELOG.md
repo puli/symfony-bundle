@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-beta9 (2015-10-05)
+
+ * fixed minimum package versions in composer.json
+
 * 1.0.0-beta8 (2015-08-24)
 
  * fixed minimum package versions in composer.json
