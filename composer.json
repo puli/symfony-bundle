@@ -23,7 +23,7 @@
         "phpunit/phpunit": "^4.6",
         "sebastian/version": "^1.0.1"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "suggest": {
         "puli/twig-extension": "Enables Puli support in Twig."
     },

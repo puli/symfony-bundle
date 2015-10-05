@@ -1,9 +1,9 @@
 Symfony Puli Bundle
 ===================
 
-[![Build Status](https://travis-ci.org/puli/symfony-bundle.svg?branch=master)](https://travis-ci.org/puli/symfony-bundle)
+[![Build Status](https://travis-ci.org/puli/symfony-bundle.svg?branch=1.0.0-beta9)](https://travis-ci.org/puli/symfony-bundle)
 [![Build status](https://ci.appveyor.com/api/projects/status/bamk8nq8ab649jyh/branch/master?svg=true)](https://ci.appveyor.com/project/webmozart/symfony-bundle/branch/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/puli/symfony-bundle/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/puli/symfony-bundle/badges/quality-score.png?b=1.0.0-beta9)](https://scrutinizer-ci.com/g/puli/symfony-bundle/?branch=1.0.0-beta9)
 [![Latest Stable Version](https://poser.pugx.org/puli/symfony-bundle/v/stable.svg)](https://packagist.org/packages/puli/symfony-bundle)
 [![Total Downloads](https://poser.pugx.org/puli/symfony-bundle/downloads.svg)](https://packagist.org/packages/puli/symfony-bundle)
 [![Dependency Status](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0/badge.svg)](https://www.versioneye.com/php/puli:symfony-bundle/1.0.0)
