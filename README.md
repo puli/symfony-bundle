@@ -27,7 +27,7 @@ Authors
 Installation/Documentation
 --------------------------
 
-Follow the guide [Using Puli with the Symfony Framework] to install the bundle
+Follow the guide [The Puli Bundle for Symfony Projects] to install the bundle
 in your project. This guide will tell you all you need to know to use the bundle.
 
 Contribute
@@ -54,7 +54,7 @@ All contents of this package are licensed under the [MIT license].
 [Symfony]: http://symfony.com
 [Bernhard Schussek]: http://webmozarts.com
 [The Community Contributors]: https://github.com/puli/symfony-bundle/graphs/contributors
-[Using Puli with the Symfony Framework]: http://docs.puli.io/en/latest/extensions/symfony-framework.html
+[The Puli Bundle for Symfony Projects]: http://docs.puli.io/en/latest/extensions/symfony-bundle.html
 [Puli at a Glance]: http://docs.puli.io/en/latest/at-a-glance.html
 [issue tracker]: https://github.com/puli/issues/issues
 [Git repository]: https://github.com/puli/symfony-bundle
