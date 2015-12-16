@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "^2.7.3",
-        "symfony/dependency-injection": "^2.7.3",
+        "symfony/framework-bundle": "^2.7.3|^3.0.0",
+        "symfony/dependency-injection": "^2.7.3|^3.0.0",
         "puli/composer-plugin": "^1.0-beta8",
         "puli/symfony-bridge": "^1.0-beta3"
     },
     "require-dev": {
-        "symfony/twig-bundle": "^2.7.3",
+        "symfony/twig-bundle": "^2.7.3|^3.0.0",
         "puli/twig-extension": "^1.0-beta7",
         "puli/discovery": "^1.0-beta8",
         "puli/cli": "^1.0-beta8",
