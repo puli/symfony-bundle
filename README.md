@@ -55,7 +55,7 @@ All contents of this package are licensed under the [MIT license].
 [Bernhard Schussek]: http://webmozarts.com
 [The Community Contributors]: https://github.com/puli/symfony-bundle/graphs/contributors
 [The Puli Bundle for Symfony Projects]: http://docs.puli.io/en/latest/extensions/symfony-bundle.html
-[Puli at a Glance]: http://docs.puli.io/en/latest/at-a-glance.html
+[Puli at a Glance]: http://docs.puli.io/en/latest/index.html
 [issue tracker]: https://github.com/puli/issues/issues
 [Git repository]: https://github.com/puli/symfony-bundle
 [@webmozart]: https://twitter.com/webmozart
