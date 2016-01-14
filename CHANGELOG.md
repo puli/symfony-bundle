@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* 1.0.0-beta10 (2016-01-14)
+
+ * made compatible with Symfony 3.0
+
 * 1.0.0-beta9 (2015-10-05)
 
  * fixed minimum package versions in composer.json
