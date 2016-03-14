@@ -49,5 +49,27 @@ class PuliExtension extends Extension
         if ($twigBundleLoaded && $twigExtensionLoaded && $twigEnabled) {
             $loader->load('twig.xml');
         }
+
+        $this->addClassesToCompile(array(
+            'Puli\Discovery\AbstractEditableDiscovery',
+            'Puli\Discovery\Api\Binding\Binding',
+            'Puli\Discovery\Api\Binding\Initializer\BindingInitializer',
+            'Puli\Discovery\Api\Discovery',
+            'Puli\Discovery\Api\EditableDiscovery',
+            'Puli\Repository\AbstractJsonRepository',
+            'Puli\Repository\AbstractRepository',
+            'Puli\Repository\AbstractEditableRepository',
+            'Puli\Repository\Api\ChangeStream\ChangeStream',
+            'Puli\Repository\Api\EditableRepository',
+            'Puli\Repository\Api\ResourceRepository',
+            'Puli\Repository\Api\Resource\BodyResource',
+            'Puli\Repository\Api\Resource\FilesystemResource',
+            'Puli\Repository\Api\Resource\PuliResource',
+            'Puli\Repository\Api\Resource\ResourceMetadata',
+            'Puli\Repository\OptimizedJsonRepository',
+            'Puli\Repository\Resource\AbstractFilesystemResource',
+            'Puli\Repository\Resource\FileResource',
+            'Puli\Repository\Resource\GenericResource',
+        ));
     }
 }
